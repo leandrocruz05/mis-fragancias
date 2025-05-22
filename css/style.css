@@ -5,11 +5,55 @@
     box-sizing: border-box;
 }
 
-/*-----------------------------------------------------------
--------------------------- FUENTES --------------------------
--------------------------------------------------------------*/
+/*--------------------- HEADER ---------------------*/
+.logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100px;  /*Ancho del logo*/
+    height: auto; /*Proporcion*/
+}
+
+/* Favoritos y carrito */
+.favoritos {
+    display: flex;
+    align-items: center;
+}
+
+.favoritos img {
+    width: 25px;  /*Ancho del logo*/
+    height: 25px; /*alto del logo*/
+}
+
+nav {
+    background-color: #add8e6; /*Fondo solapas*/
+    height: 40px; /*Alto del fondo celeste los puntos*/
+}
+
+.menu {
+    padding: 9px;
+    list-style: none; /*Saco los puntos*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li a {
+    text-decoration: none; /*Saco la linea subrayada*/
+    color: black;
+    font-size: 20px;
+}
+
+p {
+    padding-top: 10px;
+}
+
+/*--------------------- FUENTES ---------------------*/
+
 h1 { /*Titulos grandes*/
-    font-size: 48px;
+    font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
 }
@@ -32,610 +76,168 @@ h4 { /*Subtitulo mas chico*/
     color: black;
 }
 
-/*-----------------------------------------------------------
---------------------------- HEADER --------------------------
--------------------------------------------------------------*/
-header {
-    background-color: white;
-    position: sticky; /* Posicion Fija*/
-    top: 0;
-    z-index: 1;
-}
-
-.cabecera {
+/*--------------------- FOOTER ---------------------*/
+footer {
+    padding-top: 15px;
+    background-color: #add8e6; /*Fondo pie de pagina*/
+    height: 50px; /*Alto del fondo*/
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
+    justify-content: space-evenly;
 }
 
-.logo img {
-    height: 70px;
-    padding-top: 5px;
+footer img {
+    width: 20px; /* Tamaño de los logos */
+    height: auto; /*Proporcion*/
 }
 
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+/*-------------- IMAGENES DE FONDO --------------*/
+/*Agrupo porque se repiten*/
+.ambiente, .auto, .textiles, /*INICIO*/
+.citricos, .clasicos, /*FRAGANCIAS*/
+.nosotros, .elaboracion, .historia /*TIENDA*/{ 
+    padding: 10px;
+    text-align: center;
+    height: 70vh; /*Alto de la seccion*/
+    background-size: cover; /*Cubro todo el area*/
+    background-repeat: no-repeat; /*No se repite la imagen*/
+    background-position: center; /*centro la imagen*/
 }
 
-.menu li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
+/*--------------------- INICIO ---------------------*/
+.ambiente {
+    background-image: url(../img/ambiente.jpg);
+    background-attachment: fixed;
+    color: white;
+    padding-top: 165px;
 }
 
-.favoritos {
-    display: flex;
-    gap: 15px;
+.auto {
+    background-image: url(../img/auto.jpeg);
+    background-attachment: fixed;
+    color: white;
+    padding-top: 165px;
 }
 
-.favoritos img {
-    height: 25px;
+.textiles {
+    background-image: url(../img/textiles.jpg);
+    background-attachment: fixed;
+    color: white;
+    padding-top: 165px;
 }
 
-.titulo-solapa { /*Titulo de menues*/
-    background-color: #add8e6;
+/*--------------------- FRAGANCIAS ---------------------*/
+.titulo-solapa {
+    padding-top: 22px;
+    background-color: #6bb2ca;
     height: 100px; /*Alto del fondo titulo*/
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.titulo-solapa h1 {
-    font-size: 40px;
-    color: black;
-}
-/*-----------------------------------------------------------
---------------------------- FOOTER --------------------------
--------------------------------------------------------------*/
-footer {
-    background-color: #add8e6;
-    padding: 30px 0;
-    text-align: center;
-}
-
-footer a img {
-    width: 35px;
-    margin: 0 10px;
-}
-
-.fijo {
-    position: fixed;
-    bottom: 25px;
-    right: 20px;
-}
-.fijo img {
-    width: 40px;
-}
-
-/*-----------------------------------------------------------
--------------------------------------------------------------
---------------------------- INICIO --------------------------
--------------------------------------------------------------
--------------------------------------------------------------*/
-body {
-    margin: 0;
-    background-color: white;
-    color: #333;
-}
-
-.hero { /*Recibidor*/
-    background-image: url('../img/fragancia.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
+.citricos {
+    background-image: url(../img/citricos.jpg);
     background-attachment: fixed;
-}
-
-.hero-fondo {  /*Fondo Recibidor*/
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.hero h1 { /*Titulo Recibidor*/
-    margin-bottom: 20px;
     color: white;
 }
 
-.hero p { /*Texto Recibidor*/
+.clasicos {
+    background-image: url(../img/textiles.jpg);
+    background-attachment: fixed;
+    color: white;
+}
+
+.lista-productos {
+    padding-top: 10px;
     font-size: 20px;
-    margin-bottom: 30px;
 }
 
-.boton-inicio { /*Boton Recibidor*/
-    background-color: #add8e6;
-    color: rgb(0, 0, 0);
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: 0.3s;
+/*--------------------- NOSOTROS ---------------------*/
+.nosotros {
+  background-image: url(../img/equipo.jpg);
+  background-attachment: fixed;
+  color: black;
 }
 
-/*-----------------------------------------------------------
-------------------------- SECCIONES -------------------------
--------------------------------------------------------------*/
-.secciones { /*Secciones pares*/
-    padding: 80px 20px;
+.elaboracion {
+  background-image: url(../img/elaboracion.jpg);
+  background-attachment: fixed;
+  color: black;
+}
+
+.historia {
+  background-image: url(../img/historia.jpg);
+}
+
+/*--------------------- TIENDA ---------------------*/
+.tienda {
     display: flex;
-    justify-content: center;
-    background-color: #add8e6;
 }
 
-.segunda { /*Secciones impares(cambio el color)*/
-    background-color: #f4f4f4;
-}
-
-.contenido-seccion { /*Contenido de secciones*/
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.contenido-seccion img { /*Fotos de las secciones*/
-    width: 100%;
-    max-width: 700px;
-    border-radius: 5px;
-}
-
-.contenido-seccion div { /*Pongo el texto contrario a la foto*/
-    flex: 1;
-}
-
-.contenido-seccion p { /*Agrando texto descripcion secciones*/
-    font-size: 18px;
-}
-
-/*-----------------------------------------------------------
-------------------------- DESTACADOS ------------------------
--------------------------------------------------------------*/
-.destacados { /*Contenido de las secciones*/
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f7f7f7;
-}
-
-.tarjetas-destacados { /*Tarjetas de destacados*/
-    display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.tarjeta { /*Contenido tarjetas de destacados*/
-    background: #add8e6;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.tarjeta img { /*Foto de tarjetas de destacados*/
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.tarjeta h4 { /*Doy espacio al titulo de la tarjeta*/
-    margin: 10px 0 5px;
-}
-
-.tarjeta p { /*Doy espacio al texto de la tarjeta*/
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.precio { /*Estilo del precio de tarjetas destacados*/
-    font-weight: bold;
-    color: #a27d5c;
-    margin-bottom: 10px;
-}
-
-.boton-comprar { /*Boton comprar de tarjetas destacados*/
-    background-color: #a27d5c;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/*-----------------------------------------------------------
------------------------- PROMOCIONES ------------------------
--------------------------------------------------------------*/
-.promociones { /*Contenido promociones*/
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #add8e6;
-}
-
-.promo-fondo { /*Fondo promociones*/
-    background-color: black;
+.filtros {
+    width: 25%; /*Uso el 25 de la pagina*/
     padding: 30px;
-    border-radius: 15px;
-    margin: 20px auto;
-    max-width: 600px;
 }
 
-.boton-promo { /*Boton promociones*/
-    background-color: #add8e6;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+.filtros ul li {
+    list-style: none; /*Saco los puntos*/
+}
+
+.productos {
+    text-align: center;
+    padding: 20px;
+}
+
+.foto-producto {
+    width: 200px;
+    height: auto;
+}
+
+.descripcion-producto {
     margin-top: 15px;
 }
 
-/*-----------------------------------------------------------
--------------------------- CONTACTO -------------------------
--------------------------------------------------------------*/
-.contacto { /*Fondo contacto*/
-    padding: 80px 20px;
-    background-color: #f4f4f4;
-    color: white;
-    text-align: center;
-}
-
-.contacto h3 { /*Titulo contacto*/
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contacto p { /*Texto contacto*/
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: black;
-}
-
-.contacto .boton-contacto { /*Fondo y boton contacto*/
-    background-color: #add8e6;
-    color: black;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-/*-----------------------------------------------------------
--------------------------------------------------------------
------------------------- FRAGANCIAS -------------------------
--------------------------------------------------------------
--------------------------------------------------------------*/
-.grid-fragancias-estilo { /*Fondo y bordes Grid*/
-    padding: 60px 20px;
-    background-color: #fdfdfd;
-    color: #fff;
-}
-  
-.grid-fragancias-div { /*Division del grid*/
-    display: grid;
-    grid-template-columns: repeat(5, minmax(240px, 1fr));
-    gap: 20px;
-}
-  
-.frag-item { /*Config "fragancia items" del grid*/
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    overflow: hidden;
-    height: 280px;
-    display: flex;
-    /*align-items: flex-end; /*Fondo transparente bajo*/
-    text-align: center;
-}
-
-.frag-item.vertical { /*Config item en vertical*/
-    height: 320px;
-}
-  
-.frag-item.horizontal { /*Config item en horizontal*/
-    grid-column: span 2;
-    height: 320px;
-}
-
-.info-fragancia { /*Fondo de info del item*/
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px;
-    width: 100%;
-    align-content: center;
-    transition: 1.5s;
-}
-
-.info-fragancia:hover h2{
-    transition: 1.5s;
-    font-size: 40px;
-}
-
-.info-fragancia:hover {
-    background: fixed;
-    transition: 1.5s;
-}
-
-.info-fragancia h2 { /*Titulo info del item*/
-    margin: 0 0 10px;
-    font-size: 24px;
-    transition: 1.5s;
-}
-
-.info-fragancia p { /*Texto info del item*/
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.categoria { /*Etiqueta de categoria info del item*/
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-/*-----------------------------------------------------------
--------------------------------------------------------------
--------------------------- NOSOTROS -------------------------
--------------------------------------------------------------
--------------------------------------------------------------*/
-.nosotros { /*Contenedores nosotros*/
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-}
-
-.fondo { /*Fondo segundo contenedor nosotros*/
-    background-color: #add8e6;
-    border-radius: 10px;
-}
-
-.nosotros h3, .nosotros-video h3 { /*Titulo nosotros y video*/
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.nosotros p { /*Texto nosotros*/
-    font-size: 18px;
-}
-
-.nosotros-bloques { /*Contenedor bloque division*/
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    background-color: white;
-    padding: 80px 20px;
-}
-
-.bloque { /*Config bloques*/
-    flex: 1;
-    max-width: 380px;
-    padding: 30px;
-    background-color: #add8e6;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.bloque h3 { /*Titulos bloques*/
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.nosotros-video { /*Config y fondo video*/
-    padding: 60px 20px;
-    text-align: center;
-}
-
-
-/*-----------------------------------------------------------
--------------------------------------------------------------
---------------------------- TIENDA --------------------------
--------------------------------------------------------------
--------------------------------------------------------------*/
-.tienda { /*Config contenedor card*/
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-    justify-content: center;
-}
-
-.filtros { /*Config contenedor categoria */
-    width: 100%;
-    max-width: 200px;
-    max-height: 400px;
-    padding: 20px;
-    background-color: #add8e6;
-    border-radius: 10px;
-}
-
-.filtros ul li { /*Saco puntos de lista categoria*/
-    list-style: none;
-    margin: 8px 0;
-}
-
-.grid-container { /*Configuracion grid*/
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    flex: 1;
-}
-
-.productos { /*Card producto*/
-    background-color: #add8e6;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0 20px;
-}
-
-.foto-producto { /*Foto producto*/
-    width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0 0;
-}
-
-.productos p { /*Texto card producto*/
-    padding: 15px;
-    font-size: 16px;
-}
-
-.boton-tienda { /*Boton comprar producto*/
+.boton-comprar {
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #36849e;
+    background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-/*-----------------------------------------------------------
--------------------------------------------------------------
--------------------------- CONTACTO -------------------------
--------------------------------------------------------------
--------------------------------------------------------------*/
-.contactos { /*Contenedor contactos*/
+/*--------------------- CONTACTO ---------------------*/
+.contactos {
     margin: 20px;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.columnas { /*Configuracion de columnas*/
-    flex: 1 1 450px;
-    max-width: 600px;
+.columnas {
+    width: 48%;
     text-align: center;
+    
 }
 
-form { /*Estructura Formulario*/
+form {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 
-form input, /*Campos del Formulario*/
-form textarea {
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: inherit;
-}
-
-.informacion { /*Fondo informacion contacto*/
-    background-color: #c1e4ec65;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-}
-
-.informacion h4 { /*Titulos informacion contacto*/
-    padding-top: 15px;
-    font-size: 18px;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.informacion p { /*Texto informacion contacto*/
-    font-style: italic;
-    margin-top: 0;
+input, textarea {
+    padding: 10px;
     margin-bottom: 10px;
 }
 
-.mapa { /*Mapa informacion contacto*/
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    margin-bottom: 20px;
-    border-radius: 10px;
+.informacion {
+    background-color: #c1e4ec65;
+    padding: 15px;
 }
 
-.mapa iframe { /*Config Mapa informacion contacto*/
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+.informacion h4 {
+    padding: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------------------------------------------*/
-/*--------------- MEDIA QUERYS - CLASE --------------*/
-/*---------------------------------------------------*/
-/*Hacer media desde la pantalla de mi proyecto hasta 350
-@media screen and (max-width:796px) {
-
+.informacion p {
+    padding-top: 0;
+    font-style: italic;
 }
-
-Si tiene display flex. Lo puedo pasar a flex-direction column
-display none si la foto se retoba
-
-*/
-
-
