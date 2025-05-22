@@ -16,8 +16,10 @@ body {
 }
 
 
-.titulo-solapa { /*Titulo de menues*/
-    height: 100px; /*Alto del fondo titulo*/
+.titulo-solapa {
+    /*Titulo de menues*/
+    height: 100px;
+    /*Alto del fondo titulo*/
     text-align: center;
     align-content: center;
 }
@@ -30,7 +32,8 @@ body {
 /*-----------------------------------------------------------
 -------------------------- FUENTES --------------------------
 -------------------------------------------------------------*/
-h1 { /*Titulos grandes*/
+h1 {
+    /*Titulos grandes*/
     font-size: 48px;
     color: black;
     font-family: "Oleo Script", system-ui;
@@ -38,17 +41,20 @@ h1 { /*Titulos grandes*/
     font-style: normal;
 }
 
-h2 { /*Subtitulos en Blanco*/
+h2 {
+    /*Subtitulos en Blanco*/
     font-size: 25px;
     color: white;
 }
 
-h3 { /*Subtitulos en Negro*/
+h3 {
+    /*Subtitulos en Negro*/
     font-size: 25px;
     color: black;
 }
 
-h4 { /*Subtitulo mas chico*/
+h4 {
+    /*Subtitulo mas chico*/
     font-size: 18px;
     color: black;
 }
@@ -62,21 +68,48 @@ header {
     align-items: center;
     padding: 5px 30px;
     background-color: white;
-    position: sticky; /* Posicion Fija*/
+    position: sticky;
+    /* Posicion Fija*/
     top: 0;
     z-index: 1;
 }
 
-.nav-tabs { /*Bordes del nav*/
-    --bs-nav-tabs-link-active-bg: #00cdd833; /*Fondo del activo*/
-    --bs-nav-tabs-link-active-border-color: #00ced8 #00ced8 #00ced8; /*Bordes del activo*/
-    border-bottom: var(--bs-nav-tabs-border-width) solid #00ced8; /*Borde largo*/
+.nav-tabs {
+    /*Bordes del nav*/
+    --bs-nav-tabs-link-active-bg: #00cdd833;
+    /*Fondo del activo*/
+    --bs-nav-tabs-link-active-border-color: #00ced8 #00ced8 #00ced8;
+    /*Bordes del activo*/
+    border-bottom: var(--bs-nav-tabs-border-width) solid #00ced8;
+    /*Borde largo*/
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
     font-size: 17px;
+}
+
+/* Nuevo contenedor para centrar logo y alinear botón a la derecha */
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Centra el logo */
+    align-items: center;
+    padding: 10px 15px;
+}
+
+/* Logo centrado con posición absoluta del ícono */
+.menu-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    color: #333;
 }
 
 /*-----------------------------------------------------------
@@ -97,6 +130,7 @@ footer a img {
     bottom: 25px;
     right: 20px;
 }
+
 .fijo img {
     width: 40px;
 }
@@ -106,7 +140,8 @@ footer a img {
 --------------------------- INICIO --------------------------
 -------------------------------------------------------------
 -------------------------------------------------------------*/
-.hero { /*Recibidor*/
+.hero {
+    /*Recibidor*/
     background-image: url('../img/fragancia.jpg');
     background-size: cover;
     background-position: center;
@@ -119,23 +154,29 @@ footer a img {
     background-attachment: fixed;
 }
 
-.hero-fondo {  /*Fondo Recibidor*/
+.hero-fondo {
+    /*Fondo Recibidor*/
     background-color: rgba(0, 0, 0, 0.6);
     padding: 40px;
     border-radius: 10px;
+    max-width: 90%;
 }
 
-.hero h1 { /*Titulo Recibidor*/
+.hero h1 {
+    /*Titulo Recibidor*/
     margin-bottom: 20px;
     color: white;
 }
 
-.hero p { /*Texto Recibidor*/
+.hero p {
+    /*Texto Recibidor*/
     font-size: 20px;
-    margin-bottom: 0;/*30px;*/
+    margin-bottom: 0;
+    /*30px;*/
 }
 
-.boton-inicio { /*Boton Recibidor*/
+.boton-inicio {
+    /*Boton Recibidor*/
     background-color: #00ced8;
     color: rgb(0, 0, 0);
     padding: 15px 25px;
@@ -148,68 +189,72 @@ footer a img {
 /*-----------------------------------------------------------
 ------------------------- SECCIONES -------------------------
 -------------------------------------------------------------*/
-.seccion { /*Seccion*/
+.seccion {
+    /*Seccion*/
     padding: 60px 20px;
     text-align: center;
 }
 
 .seccion-contenido {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding-top: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
 }
 
 .seccion-tarjeta {
-  background-size: cover;
-  background-position: center;
-  width: 470px;
-  height: 350px; /*440px si quiero mas ancho */
-  padding: 30px;
-  color: white;
-  position: relative;
-  align-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 470px;
+    height: 350px;
+    padding: 30px;
+    color: white;
+    position: relative;
+    align-content: center;
 }
 
 .seccion-tarjeta h2 {
-  background-color: rgba(0, 206, 216, 0.8);
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+    background-color: rgba(0, 206, 216, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .auto {
-  background-image: url('../img/auto.jpeg');
+    background-image: url('../img/auto.jpeg');
 }
 
 .textiles {
-  background-image: url('../img/textiles.jpg');
+    background-image: url('../img/textiles.jpg');
 }
 
 .ambiente {
-  background-image: url('../img/ambiente.jpg');
+    background-image: url('../img/ambiente.jpg');
 }
 
 /*-----------------------------------------------------------
 ------------------------- DESTACADOS ------------------------
 -------------------------------------------------------------*/
-.destacados { /*Contenido de las secciones*/
+.destacados {
+    /*Contenido de las secciones*/
     text-align: center;
     padding: 40px 20px;
     background-color: white;
 }
 
-.tarjetas-destacados { /*Tarjetas de destacados*/
+.tarjetas-destacados {
+    /*Tarjetas de destacados*/
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.tarjeta { /*Contenido tarjetas de destacados*/
+.tarjeta {
+    /*Contenido tarjetas de destacados*/
     border-radius: 10px;
     color: #00ced8;
     padding: 20px;
@@ -222,28 +267,34 @@ footer a img {
     color: black;
 }
 
-.tarjeta img { /*Foto de tarjetas de destacados*/
+.tarjeta img {
+    /*Foto de tarjetas de destacados*/
     width: 100%;
     height: auto;
     margin-bottom: 15px;
 }
 
-.tarjeta h4 { /*Doy espacio al titulo de la tarjeta*/
+.tarjeta h4 {
+    /*Doy espacio al titulo de la tarjeta*/
     margin: 10px 0 5px;
 }
 
-.tarjeta p { /*Doy espacio al texto de la tarjeta*/
+.tarjeta p {
+    /*Doy espacio al texto de la tarjeta*/
     margin-bottom: 10px;
 }
 
-.precio { /*Estilo del precio de tarjetas destacados*/
+.precio {
+    /*Estilo del precio de tarjetas destacados*/
     font-weight: bold;
-    color: #00ced8;;
+    color: #00ced8;
+    ;
     margin-bottom: 10px;
     font-size: 20px;
 }
 
-.boton-comprar { /*Boton comprar de tarjetas destacados*/
+.boton-comprar {
+    /*Boton comprar de tarjetas destacados*/
     background-color: #00ced8;
     color: white;
     padding: 10px;
@@ -254,12 +305,14 @@ footer a img {
 /*-----------------------------------------------------------
 ------------------------ PROMOCIONES ------------------------
 -------------------------------------------------------------*/
-.promociones { /*Contenido promociones*/
+.promociones {
+    /*Contenido promociones*/
     text-align: center;
     padding: 40px 20px;
 }
 
-.promo-fondo { /*Fondo promociones*/
+.promo-fondo {
+    /*Fondo promociones*/
     background-color: black;
     padding: 30px;
     border-radius: 15px;
@@ -267,7 +320,8 @@ footer a img {
     max-width: 600px;
 }
 
-.boton-promo { /*Boton promociones*/
+.boton-promo {
+    /*Boton promociones*/
     background-color: #00ced8;
     color: black;
     padding: 10px 20px;
@@ -281,14 +335,16 @@ footer a img {
 /*-----------------------------------------------------------
 -------------------------- CONTACTO -------------------------
 -------------------------------------------------------------*/
-.contacto { /*Fondo contacto*/
+.contacto {
+    /*Fondo contacto*/
     height: 250px;
     background-color: #f4f4f4;
     text-align: center;
     align-content: center;
 }
 
-.contacto h3 { /*Titulo contacto*/
+.contacto h3 {
+    /*Titulo contacto*/
     font-size: 35px;
     margin-bottom: 40px;
     font-family: "Oleo Script", system-ui;
@@ -296,7 +352,8 @@ footer a img {
     font-style: normal;
 }
 
-.boton-contacto { /*Fondo y boton contacto*/
+.boton-contacto {
+    /*Fondo y boton contacto*/
     background-color: #00ced8;
     color: black;
     padding: 12px 25px;
@@ -309,19 +366,22 @@ footer a img {
 ------------------------ FRAGANCIAS -------------------------
 -------------------------------------------------------------
 -------------------------------------------------------------*/
-.grid-fragancias-estilo { /*Fondo y bordes Grid*/
+.grid-fragancias-estilo {
+    /*Fondo y bordes Grid*/
     padding: 60px 20px;
     background-color: #fdfdfd;
     color: #fff;
 }
 
-.grid-fragancias-div { /*Division del grid*/
+.grid-fragancias-div {
+    /*Division del grid*/
     display: grid;
     grid-template-columns: repeat(5, minmax(240px, 1fr));
     gap: 20px;
 }
 
-.frag-item { /*Config "fragancia items" del grid*/
+.frag-item {
+    /*Config "fragancia items" del grid*/
     position: relative;
     background-size: cover;
     background-position: center;
@@ -332,16 +392,19 @@ footer a img {
     text-align: center;
 }
 
-.frag-item.vertical { /*Config item en vertical*/
+.frag-item.vertical {
+    /*Config item en vertical*/
     height: 320px;
 }
 
-.frag-item.horizontal { /*Config item en horizontal*/
+.frag-item.horizontal {
+    /*Config item en horizontal*/
     grid-column: span 2;
     height: 320px;
 }
 
-.info-fragancia { /*Fondo de info del item*/
+.info-fragancia {
+    /*Fondo de info del item*/
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 20px;
@@ -350,7 +413,7 @@ footer a img {
     transition: 1.5s;
 }
 
-.info-fragancia:hover h2{
+.info-fragancia:hover h2 {
     transition: 1.5s;
     font-size: 40px;
 }
@@ -360,18 +423,21 @@ footer a img {
     transition: 1.5s;
 }
 
-.info-fragancia h2 { /*Titulo info del item*/
+.info-fragancia h2 {
+    /*Titulo info del item*/
     margin: 0 0 10px;
     font-size: 24px;
     transition: 1.5s;
 }
 
-.info-fragancia p { /*Texto info del item*/
+.info-fragancia p {
+    /*Texto info del item*/
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.categoria { /*Etiqueta de categoria info del item*/
+.categoria {
+    /*Etiqueta de categoria info del item*/
     background-color: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
     border-radius: 8px;
@@ -399,13 +465,13 @@ footer a img {
 }
 
 .titulo-nosotros {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: 20px;
-  box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .titulo-nosotros h2 {
@@ -417,13 +483,13 @@ footer a img {
 }
 
 .descripcion-nosotros {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 20px;
-  box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
 .descripcion-nosotros p {
@@ -465,36 +531,44 @@ footer a img {
 -------------------------- CONTACTO -------------------------
 -------------------------------------------------------------
 -------------------------------------------------------------*/
-.titulo-contacto { /*Titulos de seccion*/
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding-top: 30px;
-  height: 75px;
+.titulo-contacto {
+    /*Titulos de seccion*/
+    display: flex;
+    gap: 40px;
+    padding-top: 30px;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
 }
 
 .columna {
-  flex: 1;
+    flex: 1;
 }
 
 .izquierda h1 {
-  font-size: 45px;
-  color: black;
-  padding-left: 70px;
+    font-size: 45px;
+    text-align: left;
+    margin: 0;
 }
 
 .derecha h1 {
-  font-size: 45px;
-  color: black;
+    font-size: 45px;
+    text-align: left;
+    margin: 0;
 }
 
-.contactos { /*Config de area y fondo*/
+.contactos {
+    /*Config de area y fondo*/
     display: flex;
     justify-content: center;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.columnas { /*Division de columna*/
+.columnas {
+    /*Division de columna*/
     flex: 1 1 500px;
     max-width: 600px;
     text-align: left;
@@ -503,12 +577,9 @@ footer a img {
     color: #000;
 }
 
-.columnas h3 { /*Conf de titulo*/
-    color: #000;
-    text-align: center;
-}
-
-.columnas p { /*Conf de texto*/
+.columnas h3,
+.columnas p {
+    /*Conf de titulo*/
     color: #000;
     text-align: center;
 }
@@ -530,26 +601,30 @@ form textarea {
     font-family: inherit;
 }
 
-.columnas-mapa { /*Conf de fondo mapa*/
+.columnas-mapa {
+    /*Conf de fondo mapa*/
     flex: 1 1 500px;
     max-width: 600px;
     color: #000;
 }
 
-.mapa { /*Conf de mapa*/
+.mapa {
+    /*Conf de mapa*/
     position: relative;
     width: 100%;
     padding-bottom: 50%;
     overflow: hidden;
 }
 
-.mapa iframe { /*Conf de mapa link*/
+.mapa iframe {
+    /*Conf de mapa link*/
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.ubicacion-info { /*Base de mapa con info */
+.ubicacion-info {
+    /*Base de mapa con info */
     background-color: #013a3d;
     color: white;
     padding: 15px;
@@ -580,13 +655,15 @@ form textarea {
 --------------------------- TIENDA --------------------------
 -------------------------------------------------------------
 -------------------------------------------------------------*/
-.filtros { /*Configuracion filtros*/
+.filtros {
+    /*Configuracion filtros*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    border-bottom: solid #00ced8; /*linea divisora*/
+    border-bottom: solid #00ced8;
+    /*linea divisora*/
     padding-bottom: 15px;
 }
 
@@ -595,117 +672,331 @@ form textarea {
 }
 
 .categorias {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
+
 .categorias button {
-  padding: 8px 16px;
-  border: 1px solid #00ced8; /*Bordes*/
-  background-color: #fff;
-  cursor: pointer;
-  font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid #00ced8;
+    /*Bordes*/
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .categorias button:hover {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
-.filtro-ordenar { /*Ordenar por*/
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.filtro-ordenar {
+    /*Ordenar por*/
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.no-border { /*Saco el borde de ordenar por*/
-  border: none;
-  box-shadow: none;
+.no-border {
+    /*Saco el borde de ordenar por*/
+    border: none;
+    box-shadow: none;
 }
 
-.btn-outline-secondary { /*Boton filtrar*/
+.btn-outline-secondary {
+    /*Boton filtrar*/
     border-radius: 0;
-    border: 1px solid #00ced8; /*Bordes*/
+    border: 1px solid #00ced8;
+    /*Bordes*/
     color: black;
 }
 
-.btn-outline-secondary:hover { /*Boton filtrar*/
+.btn-outline-secondary:hover {
+    /*Boton filtrar*/
     background-color: black;
     color: white;
 }
 
 
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+----------------------- MEDIA QUERYS ------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+/*Arranco en 1440*/
 
 
+@media screen and (max-width: 768px) {
 
+    /*------------- INDEX -------------*/
+    header {
+        flex-direction: column;
+    }
 
+    .nav.nav-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    .nav-tabs .nav-link {
+        font-size: 20px;
+    }
 
+    .seccion-tarjeta h2 {
+        font-size: 15px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------------------------------------------*/
-/*--------------- MEDIA QUERYS - CLASE --------------*/
-/*---------------------------------------------------*/
-/*Hacer media desde la pantalla de mi proyecto hasta 350
-@media screen and (max-width:796px) {
-
+    .tarjetas-destacados {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-Si tiene display flex. Lo puedo pasar a flex-direction column
-display none si la foto se retoba
+@media screen and (max-width: 630px) {
 
-*/
+    /*------------- INDEX -------------*/
+    .nav-tabs .nav-link {
+        font-size: 15px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .seccion-contenido {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .seccion-tarjeta {
+        height: 210px;
+    }
+
+    .tarjeta p,
+    .precio {
+        font-size: 14px;
+    }
+
+    .boton-comprar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .promo-fondo h2 {
+        font-size: 20px;
+    }
+
+    .boton-promo {
+        padding: 8px 14px;
+    }
+
+    .contacto h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    /*------------- INDEX -------------*/
+    .navbary .container .navbar-brand img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .seccion {
+        padding: 20px 20px;
+    }
+
+    .seccion h1,
+    .destacados h1,
+    .promociones h1 {
+        font-size: 40px;
+    }
+
+    .seccion-tarjeta {
+        height: 210px;
+    }
+
+    .seccion-tarjeta h2 {
+        font-size: 20px;
+    }
+
+    .tarjeta p,
+    .precio {
+        font-size: 14px;
+    }
+
+    .boton-comprar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .promo-fondo h2 {
+        font-size: 20px;
+    }
+
+    .boton-promo {
+        padding: 8px 14px;
+    }
+
+    .contacto h3 {
+        font-size: 30px;
+    }
+}
+
+/* ---------- MENÚ HAMBURGUESA ---------- */
+/* Alineación del logo y el botón hamburguesa */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Ajuste del botón ☰ */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #333;
+}
+
+/* Menú móvil oculto por defecto */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 2px solid #00ced8;
+}
+
+.mobile-menu .nav-link {
+    padding: 10px;
+    font-size: 16px;
+    border-top: 1px solid #ddd;
+}
+
+@media screen and (max-width: 485px) {
+    .nav-tabs {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .navbar-brand img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .seccion-tarjeta {
+        width: 90%;
+        height: 200px;
+    }
+
+    .promo-fondo h2 {
+        font-size: 1.3rem;
+    }
+
+    .boton-promo {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+
+    .contacto h3 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .tarjeta {
+        padding: 15px;
+    }
+
+    .boton-comprar {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .boton-promo {
+        font-size: 0.85rem;
+    }
+
+    .contacto h3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .hero {
+        height: 35vh;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .seccion h1,
+    .destacados h1,
+    .promociones h1 {
+        font-size: 24px;
+    }
+
+    .seccion-tarjeta {
+        height: 180px;
+        font-size: 1.1rem;
+    }
+
+    .promo-fondo h2 {
+        font-size: 1rem;
+    }
+
+    .boton-promo {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .contacto h3 {
+        font-size: 25px;
+    }
+}
