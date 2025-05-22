@@ -5,239 +5,707 @@
     box-sizing: border-box;
 }
 
-/*--------------------- HEADER ---------------------*/
-.logo {
-    display: flex;
+body {
+    margin: 0;
+    color: #333;
+    background-image: url('../img/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+.titulo-solapa { /*Titulo de menues*/
+    height: 100px; /*Alto del fondo titulo*/
     text-align: center;
-    justify-content: center;
+    align-content: center;
 }
 
-.logo img {
-    width: 100px;  /*Ancho del logo*/
-    height: auto; /*Proporcion*/
-}
-
-/* Favoritos y carrito */
-.favoritos {
-    display: flex;
-    align-items: center;
-}
-
-.favoritos img {
-    width: 25px;  /*Ancho del logo*/
-    height: 25px; /*alto del logo*/
-}
-
-nav {
-    background-color: #add8e6; /*Fondo solapas*/
-    height: 40px; /*Alto del fondo celeste los puntos*/
-}
-
-.menu {
-    padding: 9px;
-    list-style: none; /*Saco los puntos*/
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu li a {
-    text-decoration: none; /*Saco la linea subrayada*/
+.titulo-solapa h1 {
+    font-size: 40px;
     color: black;
-    font-size: 20px;
 }
 
-p {
-    padding-top: 10px;
-}
-
-/*--------------------- FUENTES ---------------------*/
-
+/*-----------------------------------------------------------
+-------------------------- FUENTES --------------------------
+-------------------------------------------------------------*/
 h1 { /*Titulos grandes*/
-    font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48px;
     color: black;
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h2 { /*Subtitulos en Blanco*/
     font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
 
 h3 { /*Subtitulos en Negro*/
     font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
 }
 
 h4 { /*Subtitulo mas chico*/
     font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
 }
 
-/*--------------------- FOOTER ---------------------*/
-footer {
-    padding-top: 15px;
-    background-color: #add8e6; /*Fondo pie de pagina*/
-    height: 50px; /*Alto del fondo*/
+/*-----------------------------------------------------------
+--------------------------- HEADER --------------------------
+-------------------------------------------------------------*/
+header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background-color: white;
+    position: sticky; /* Posicion Fija*/
+    top: 0;
+    z-index: 1;
 }
 
-footer img {
-    width: 20px; /* Tamaño de los logos */
-    height: auto; /*Proporcion*/
+.nav-tabs { /*Bordes del nav*/
+    --bs-nav-tabs-link-active-bg: #00cdd833; /*Fondo del activo*/
+    --bs-nav-tabs-link-active-border-color: #00ced8 #00ced8 #00ced8; /*Bordes del activo*/
+    border-bottom: var(--bs-nav-tabs-border-width) solid #00ced8; /*Borde largo*/
 }
 
-/*-------------- IMAGENES DE FONDO --------------*/
-/*Agrupo porque se repiten*/
-.ambiente, .auto, .textiles, /*INICIO*/
-.citricos, .clasicos, /*FRAGANCIAS*/
-.nosotros, .elaboracion, .historia /*TIENDA*/{ 
-    padding: 10px;
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+}
+
+/*-----------------------------------------------------------
+--------------------------- FOOTER --------------------------
+-------------------------------------------------------------*/
+footer {
+    padding: 30px 0;
     text-align: center;
-    height: 70vh; /*Alto de la seccion*/
-    background-size: cover; /*Cubro todo el area*/
-    background-repeat: no-repeat; /*No se repite la imagen*/
-    background-position: center; /*centro la imagen*/
 }
 
-/*--------------------- INICIO ---------------------*/
-.ambiente {
-    background-image: url(../img/ambiente.jpg);
-    background-attachment: fixed;
+footer a img {
+    width: 35px;
+    margin: 0 10px;
+}
+
+.fijo {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+}
+.fijo img {
+    width: 40px;
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+--------------------------- INICIO --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.hero { /*Recibidor*/
+    background-image: url('../img/fragancia.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding-top: 165px;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.hero-fondo {  /*Fondo Recibidor*/
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 { /*Titulo Recibidor*/
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero p { /*Texto Recibidor*/
+    font-size: 20px;
+    margin-bottom: 0;/*30px;*/
+}
+
+.boton-inicio { /*Boton Recibidor*/
+    background-color: #00ced8;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/*-----------------------------------------------------------
+------------------------- SECCIONES -------------------------
+-------------------------------------------------------------*/
+.seccion { /*Seccion*/
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.seccion-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.seccion-tarjeta {
+  background-size: cover;
+  background-position: center;
+  width: 470px;
+  height: 350px; /*440px si quiero mas ancho */
+  padding: 30px;
+  color: white;
+  position: relative;
+  align-content: center;
+}
+
+.seccion-tarjeta h2 {
+  background-color: rgba(0, 206, 216, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .auto {
-    background-image: url(../img/auto.jpeg);
-    background-attachment: fixed;
-    color: white;
-    padding-top: 165px;
+  background-image: url('../img/auto.jpeg');
 }
 
 .textiles {
-    background-image: url(../img/textiles.jpg);
-    background-attachment: fixed;
-    color: white;
-    padding-top: 165px;
+  background-image: url('../img/textiles.jpg');
 }
 
-/*--------------------- FRAGANCIAS ---------------------*/
-.titulo-solapa {
-    padding-top: 22px;
-    background-color: #6bb2ca;
-    height: 100px; /*Alto del fondo titulo*/
+.ambiente {
+  background-image: url('../img/ambiente.jpg');
+}
+
+/*-----------------------------------------------------------
+------------------------- DESTACADOS ------------------------
+-------------------------------------------------------------*/
+.destacados { /*Contenido de las secciones*/
     text-align: center;
+    padding: 40px 20px;
+    background-color: white;
 }
 
-.citricos {
-    background-image: url(../img/citricos.jpg);
-    background-attachment: fixed;
-    color: white;
+.tarjetas-destacados { /*Tarjetas de destacados*/
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.clasicos {
-    background-image: url(../img/textiles.jpg);
-    background-attachment: fixed;
-    color: white;
-}
-
-.lista-productos {
-    padding-top: 10px;
-    font-size: 20px;
-}
-
-/*--------------------- NOSOTROS ---------------------*/
-.nosotros {
-  background-image: url(../img/equipo.jpg);
-  background-attachment: fixed;
-  color: black;
-}
-
-.elaboracion {
-  background-image: url(../img/elaboracion.jpg);
-  background-attachment: fixed;
-  color: black;
-}
-
-.historia {
-  background-image: url(../img/historia.jpg);
-}
-
-/*--------------------- TIENDA ---------------------*/
-.tienda {
-    display: flex;
-}
-
-.filtros {
-    width: 25%; /*Uso el 25 de la pagina*/
-    padding: 30px;
-}
-
-.filtros ul li {
-    list-style: none; /*Saco los puntos*/
-}
-
-.productos {
-    text-align: center;
+.tarjeta { /*Contenido tarjetas de destacados*/
+    border-radius: 10px;
+    color: #00ced8;
     padding: 20px;
-}
-
-.foto-producto {
-    width: 200px;
-    height: auto;
-}
-
-.descripcion-producto {
-    margin-top: 15px;
-}
-
-.boton-comprar {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-}
-
-/*--------------------- CONTACTO ---------------------*/
-.contactos {
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.columnas {
-    width: 48%;
-    text-align: center;
-    
-}
-
-form {
-    padding-top: 20px;
+    border: double;
     display: flex;
     flex-direction: column;
 }
 
-input, textarea {
-    padding: 10px;
+.tarjeta p {
+    color: black;
+}
+
+.tarjeta img { /*Foto de tarjetas de destacados*/
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tarjeta h4 { /*Doy espacio al titulo de la tarjeta*/
+    margin: 10px 0 5px;
+}
+
+.tarjeta p { /*Doy espacio al texto de la tarjeta*/
     margin-bottom: 10px;
 }
 
-.informacion {
-    background-color: #c1e4ec65;
+.precio { /*Estilo del precio de tarjetas destacados*/
+    font-weight: bold;
+    color: #00ced8;;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.boton-comprar { /*Boton comprar de tarjetas destacados*/
+    background-color: #00ced8;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+/*-----------------------------------------------------------
+------------------------ PROMOCIONES ------------------------
+-------------------------------------------------------------*/
+.promociones { /*Contenido promociones*/
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.promo-fondo { /*Fondo promociones*/
+    background-color: black;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.boton-promo { /*Boton promociones*/
+    background-color: #00ced8;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/*-----------------------------------------------------------
+-------------------------- CONTACTO -------------------------
+-------------------------------------------------------------*/
+.contacto { /*Fondo contacto*/
+    height: 250px;
+    background-color: #f4f4f4;
+    text-align: center;
+    align-content: center;
+}
+
+.contacto h3 { /*Titulo contacto*/
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.boton-contacto { /*Fondo y boton contacto*/
+    background-color: #00ced8;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ FRAGANCIAS -------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.grid-fragancias-estilo { /*Fondo y bordes Grid*/
+    padding: 60px 20px;
+    background-color: #fdfdfd;
+    color: #fff;
+}
+
+.grid-fragancias-div { /*Division del grid*/
+    display: grid;
+    grid-template-columns: repeat(5, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.frag-item { /*Config "fragancia items" del grid*/
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    text-align: center;
+}
+
+.frag-item.vertical { /*Config item en vertical*/
+    height: 320px;
+}
+
+.frag-item.horizontal { /*Config item en horizontal*/
+    grid-column: span 2;
+    height: 320px;
+}
+
+.info-fragancia { /*Fondo de info del item*/
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    align-content: center;
+    transition: 1.5s;
+}
+
+.info-fragancia:hover h2{
+    transition: 1.5s;
+    font-size: 40px;
+}
+
+.info-fragancia:hover {
+    background: fixed;
+    transition: 1.5s;
+}
+
+.info-fragancia h2 { /*Titulo info del item*/
+    margin: 0 0 10px;
+    font-size: 24px;
+    transition: 1.5s;
+}
+
+.info-fragancia p { /*Texto info del item*/
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.categoria { /*Etiqueta de categoria info del item*/
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+-------------------------- NOSOTROS -------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.seccion-nosotros {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+.contenedor-nosotros {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-nosotros {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.titulo-nosotros h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+.descripcion-nosotros {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.descripcion-nosotros p {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.descripcion-nosotros strong {
+    font-weight: 600;
+}
+
+.nosotros-bloques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.bloque {
+    flex: 1;
+    max-width: 380px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bloque h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+-------------------------- CONTACTO -------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.titulo-contacto { /*Titulos de seccion*/
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 30px;
+  height: 75px;
+}
+
+.columna {
+  flex: 1;
+}
+
+.izquierda h1 {
+  font-size: 45px;
+  color: black;
+  padding-left: 70px;
+}
+
+.derecha h1 {
+  font-size: 45px;
+  color: black;
+}
+
+.contactos { /*Config de area y fondo*/
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.columnas { /*Division de columna*/
+    flex: 1 1 500px;
+    max-width: 600px;
+    text-align: left;
+    background-color: white;
+    padding: 30px;
+    color: #000;
+}
+
+.columnas h3 { /*Conf de titulo*/
+    color: #000;
+    text-align: center;
+}
+
+.columnas p { /*Conf de texto*/
+    color: #000;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+form input,
+form textarea {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-family: inherit;
+}
+
+.columnas-mapa { /*Conf de fondo mapa*/
+    flex: 1 1 500px;
+    max-width: 600px;
+    color: #000;
+}
+
+.mapa { /*Conf de mapa*/
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    overflow: hidden;
+}
+
+.mapa iframe { /*Conf de mapa link*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ubicacion-info { /*Base de mapa con info */
+    background-color: #013a3d;
+    color: white;
     padding: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.informacion {
+    background: transparent;
+    color: white;
+    padding: 0;
 }
 
 .informacion h4 {
-    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 .informacion p {
-    padding-top: 0;
-    font-style: italic;
+    font-style: normal;
+    font-size: 16px;
 }
+
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+--------------------------- TIENDA --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.filtros { /*Configuracion filtros*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: solid #00ced8; /*linea divisora*/
+    padding-bottom: 15px;
+}
+
+.form-check-label p {
+    font-size: 14px;
+}
+
+.categorias {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.categorias button {
+  padding: 8px 16px;
+  border: 1px solid #00ced8; /*Bordes*/
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.categorias button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.filtro-ordenar { /*Ordenar por*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.no-border { /*Saco el borde de ordenar por*/
+  border: none;
+  box-shadow: none;
+}
+
+.btn-outline-secondary { /*Boton filtrar*/
+    border-radius: 0;
+    border: 1px solid #00ced8; /*Bordes*/
+    color: black;
+}
+
+.btn-outline-secondary:hover { /*Boton filtrar*/
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------*/
+/*--------------- MEDIA QUERYS - CLASE --------------*/
+/*---------------------------------------------------*/
+/*Hacer media desde la pantalla de mi proyecto hasta 350
+@media screen and (max-width:796px) {
+
+}
+
+Si tiene display flex. Lo puedo pasar a flex-direction column
+display none si la foto se retoba
+
+*/
