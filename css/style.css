@@ -90,28 +90,6 @@ header {
     font-size: 17px;
 }
 
-/* Nuevo contenedor para centrar logo y alinear botón a la derecha */
-.nav-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    /* Centra el logo */
-    align-items: center;
-    padding: 10px 15px;
-}
-
-/* Logo centrado con posición absoluta del ícono */
-.menu-toggle {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-    color: #333;
-}
-
 /*-----------------------------------------------------------
 --------------------------- FOOTER --------------------------
 -------------------------------------------------------------*/
@@ -376,7 +354,7 @@ footer a img {
 .grid-fragancias-div {
     /*Division del grid*/
     display: grid;
-    grid-template-columns: repeat(5, minmax(240px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
 
@@ -726,6 +704,11 @@ form textarea {
 -------------------------------------------------------------*/
 /*Arranco en 1440*/
 
+@media screen and (max-width: 1440px) {
+    .grid-fragancias-div {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -750,6 +733,16 @@ form textarea {
     .tarjetas-destacados {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /*------------- FRAGANCIAS -------------*/
+    .grid-fragancias-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .frag-item.horizontal {
+        grid-column: span 2;
+    }
+
 }
 
 @media screen and (max-width: 630px) {
@@ -794,6 +787,26 @@ form textarea {
     .contacto h3 {
         font-size: 30px;
     }
+
+    /*------------- FRAGANCIAS -------------*/
+    .grid-fragancias-div {
+        grid-template-columns: 1fr;
+    }
+
+    .frag-item,
+    .frag-item.vertical,
+    .frag-item.horizontal {
+        grid-column: span 1;
+        height: 250px;
+    }
+
+    .info-fragancia h2 {
+        font-size: 20px;
+    }
+
+    .info-fragancia p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -802,10 +815,6 @@ form textarea {
     .navbary .container .navbar-brand img {
         width: 50px;
         height: 50px;
-    }
-
-    .nav-tabs .nav-link {
-        font-size: 13px;
     }
 
     .hero h1 {
@@ -857,64 +866,10 @@ form textarea {
     }
 }
 
-/* ---------- MENÚ HAMBURGUESA ---------- */
-/* Alineación del logo y el botón hamburguesa */
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-/* Ajuste del botón ☰ */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px 15px;
-    color: #333;
-}
-
-/* Menú móvil oculto por defecto */
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    padding: 10px 0;
-    text-align: center;
-    border-top: 2px solid #00ced8;
-}
-
-.mobile-menu .nav-link {
-    padding: 10px;
-    font-size: 16px;
-    border-top: 1px solid #ddd;
-}
-
 @media screen and (max-width: 485px) {
-    .nav-tabs {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .mobile-menu.show {
-        display: flex;
-    }
-
     .navbar-brand img {
         width: 50px;
         height: 50px;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
     }
 
     .seccion-tarjeta {
@@ -934,15 +889,24 @@ form textarea {
     .contacto h3 {
         font-size: 24px;
     }
+
+    /*------------- FRAGANCIAS -------------*/
+    .titulo-solapa h1 {
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width: 375px) {
+    .hero {
+        height: 400px;
+    }
+    
     .hero h1 {
-        font-size: 1.4rem;
+        font-size: 25px;
     }
 
     .hero p {
-        font-size: 0.8rem;
+        font-size: 13px;
     }
 
     .tarjeta {
@@ -965,15 +929,7 @@ form textarea {
 
 @media screen and (max-width: 350px) {
     .hero {
-        height: 35vh;
-    }
-
-    .hero h1 {
-        font-size: 1.2rem;
-    }
-
-    .hero p {
-        font-size: 0.8rem;
+        height: 400px;
     }
 
     .seccion h1,
