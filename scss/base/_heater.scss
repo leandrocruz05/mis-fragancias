@@ -1,0 +1,136 @@
+@import './funcionalidad';
+
+// Animación al entrar
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Header
+header {
+  background-color: $color-blanco;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: slideDown 0.6s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+// Navbar con distribución entre logo e ítems
+.navbar {
+  @include flex(flex, space-between, center);
+  padding: 10px 30px;
+  flex-wrap: wrap;
+
+  .navbar-brand {
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    @include flex(flex, flex-end, center);
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+}
+
+.bootstrap-offcanvas {
+  display: none;
+}
+
+// Enlaces
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: $color-gris-oscuro;
+  font-size: nth($sizes, 4);
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $color-cian;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: $color-cian;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    color: $color-cian;
+    font-weight: bold;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// Footer
+footer {
+  padding: 15px 0;
+  text-align: center;
+  font-family: $fuente-principal;
+}
+
+.footer-redes {
+  @include flex(flex, center, center);
+  gap: 20px;
+  margin-bottom: 15px;
+
+  a img {
+    width: 35px;
+    transition: transform 0.3s;
+  }
+
+  a:hover img {
+    transform: scale(1.5);
+  }
+}
+
+.footer-mama {
+  font-size: nth($sizes, 1);
+  color: $color-gris-oscuro;
+  padding-top: 10px;
+  border-top: 1px solid $color-negro;
+  max-width: 90%;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.fijo {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+
+  img {
+    width: 40px;
+    transition: transform 0.3s;
+  }
+
+  a:hover img {
+    transform: scale(1.3);
+  }
+}

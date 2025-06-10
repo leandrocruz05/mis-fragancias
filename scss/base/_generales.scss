@@ -1,0 +1,57 @@
+@import './funcionalidad';
+
+// Generales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: $color-gris-oscuro;
+    background-image: url('../img/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo-solapa {
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    text-align: center;
+
+    h1 {
+        font-size: nth($sizes, 10);
+        color: $color-negro;
+    }
+}
+
+// Fuentes
+h1 {
+    // Titulos grandes
+    font-size: nth($sizes, 12);
+    color: $color-negro;
+    font-family: $fuente-titulos;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    //Subtitulos blancos
+    font-size: nth($sizes, 7);
+    color: $color-blanco;
+}
+
+h3 {
+    // Subtitulos negros
+    font-size: nth($sizes, 7);
+    color: $color-negro;
+}
+
+h4 {
+    //Subtitulo menor negro
+    font-size: nth($sizes, 5);
+    color: $color-negro;
+}

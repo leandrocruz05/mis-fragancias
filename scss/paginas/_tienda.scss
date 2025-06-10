@@ -1,0 +1,79 @@
+@import '../base/funcionalidad';
+
+/* --------------------- TIENDA -------------------- */
+/* ------------------------------------------------- */
+%fondohover {
+    background-color: $color-cian;
+    color: $color-blanco;
+    transition: 1s;
+}
+
+.filtros {
+    // Configuracion filtros
+    @include flex(flex, space-between, center);
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: solid $color-cian;
+    padding-bottom: 15px;
+}
+
+.form-check-label p {
+    font-size: nth($sizes, 1);
+}
+
+.categorias {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    button {
+        padding: 8px 16px;
+        border: 1px solid $color-cian;
+        //Bordes
+        background-color: $color-blanco;
+        cursor: pointer;
+        font-size: nth($sizes, 1);
+
+        &:hover {
+            @extend %fondohover;
+        }
+    }
+}
+
+.filtro-ordenar {
+    // Ordenar por
+    @include flex (flex, center, center);
+    gap: 10px;
+}
+
+.no-border {
+    // Saco el borde de ordenar por
+    border: none;
+    box-shadow: none;
+}
+
+.btn-outline-secondary {
+    // Boton filtrar
+    border-radius: 0;
+    border: 1px solid $color-cian;
+    // Bordes
+    color: $color-negro;
+
+    &:hover {
+        // Boton filtrar
+        @extend %fondohover;
+    }
+}
+
+.form-check-input:checked {
+    background-color: $color-cian;
+}
+
+.tarjeta {
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}

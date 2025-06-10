@@ -1,0 +1,83 @@
+@import '../base/funcionalidad';
+
+/* ------------------- FRAGANCIAS ------------------ */
+/* ------------------------------------------------- */
+.grid-fragancias-estilo {
+    //Fondo y bordes Grid
+    padding: 60px 20px;
+    background-color: $color-fondo-contacto;
+    color: $color-blanco;
+}
+
+.grid-fragancias-div {
+    //Division del grid
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.frag-item {
+    // Config "fragancia items" del grid
+    position: relative;
+    background-position: center;
+    @include fondo-imagen('');
+    border-radius: 15px;
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    text-align: center;
+
+    &.vertical {
+        height: 320px;
+    }
+
+    &.horizontal {
+        grid-column: span 2;
+        height: 320px;
+    }
+
+    &:hover .info-fragancia {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.info-fragancia {
+    // Fondo de info del item
+    background: rgba(0, 0, 0, 0); // Sin cortina inicialmente
+    color: $color-blanco;
+    padding: 20px;
+    width: 100%;
+    align-content: center;
+    transition: background 0.5s ease;
+
+    &:hover {
+        background: fixed;
+        transition: 1.5s;
+
+        h2 {
+            transition: 1.5s;
+            font-size: 40px;
+        }
+    }
+
+    h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        transition: 1.5s;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+
+.categoria {
+    //Etiqueta de categoria info del item
+    background-color: $color-transparente;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: nth($sizes, 1);
+    text-transform: uppercase;
+}

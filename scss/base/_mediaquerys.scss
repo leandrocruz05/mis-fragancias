@@ -1,0 +1,484 @@
+@import './funcionalidad';
+
+/* ----------------- MEDIA QUERYS ------------------ */
+/* ------------------------------------------------- */
+@include pantalla {
+
+    // Fragancias
+    .grid-fragancias-div {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@include pantalla-l {
+    .hero {
+        h1 {
+            &.titulo-tipeado {
+                white-space: normal; // Permite saltos de línea
+                overflow: visible; // Muestra todo el contenido
+                animation: none; // Opcional: desactiva la animación para evitar problemas
+                width: 100%; // Asegura que se ajuste al ancho del contenedor
+            }
+        }
+    }
+}
+
+@include tablet {
+
+    // Index
+    header {
+        flex-direction: column;
+    }
+
+    .nav.nav-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-tabs {
+        .nav-link {
+            font-size: nth($sizes, 2);
+        }
+    }
+
+    .seccion-tarjeta {
+        h2 {
+            font-size: nth($sizes, 2);
+        }
+    }
+
+    .tarjetas-destacados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Fragancias
+    .grid-fragancias-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .frag-item {
+        &.horizontal {
+            grid-column: span 2;
+        }
+    }
+
+    //Contacto
+    .titulo-contacto {
+        flex-direction: column;
+        gap: 570px;
+        padding-top: 20px;
+        align-items: center;
+    }
+
+    .columna {
+
+        &.izquierda h1,
+        &.derecha h1 {
+            font-size: nth($sizes, 9);
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    .contactos {
+        flex-direction: column;
+        gap: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    %columnas-estilos {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .columnas {
+        @extend %columnas-estilos;
+
+        h3,
+        p {
+            text-align: left;
+        }
+    }
+
+    .columnas-mapa {
+        @extend %columnas-estilos;
+    }
+
+    .ubicacion-info {
+        text-align: left;
+    }
+}
+
+@include tablet-l {
+
+    // Index
+    .nav-tabs {
+        .nav-link {
+            font-size: nth($sizes, 2);
+        }
+    }
+
+    .hero {
+        h1 {
+            font-size: nth($sizes, 9);
+        }
+
+        p {
+            font-size: nth($sizes, 4);
+        }
+    }
+
+    .seccion-contenido {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .seccion-tarjeta {
+        height: 210px;
+    }
+
+    .tarjeta {
+        p {
+            font-size: nth($sizes, 1);
+        }
+    }
+
+    .precio {
+        font-size: nth($sizes, 1);
+    }
+
+    .boton-comprar {
+        font-size: nth($sizes, 1);
+        padding: 8px 12px;
+    }
+
+    .promo-fondo {
+        h2 {
+            font-size: nth($sizes, 6);
+        }
+    }
+
+    .boton-promo {
+        padding: 8px 14px;
+    }
+
+    .contacto {
+        h3 {
+            font-size: nth($sizes, 8);
+        }
+    }
+
+    // Fragancias
+    .grid-fragancias-div {
+        grid-template-columns: 1fr;
+    }
+
+    .frag-item {
+        grid-column: span 1;
+        height: 250px;
+
+        &.vertical,
+        &.horizontal {
+            grid-column: span 1;
+            height: 250px;
+        }
+    }
+
+    .info-fragancia {
+        h2 {
+            font-size: nth($sizes, 6);
+        }
+
+        p {
+            font-size: nth($sizes, 1);
+        }
+    }
+
+    // Nosotros
+    .contenedor-nosotros {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .titulo-nosotros,
+    .descripcion-nosotros {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo-nosotros {
+        h2 {
+            font-size: nth($sizes, 13);
+        }
+    }
+
+    // Contacto
+    .titulo-contacto {
+        gap: 560px;
+    }
+
+    .contactos {
+        gap: 47px;
+    }
+}
+
+@include tablet-m {
+    body {
+        padding-top: 80px;
+    }
+
+    // ACA APARECE EL MENU DESPLEGABLE
+    .bootstrap-offcanvas {
+        display: block;
+    }
+
+    .bg-body-tertiary {
+        background-color: $color-blanco !important;
+    }
+
+    .navbar-personalizada {
+        display: none;
+    }
+
+    .titulo-solapa {
+        h1 {
+            padding-top: 30px;
+        }
+    }
+
+    // Contacto 
+    .titulo-contacto {
+        gap: 590px;
+    }
+
+    .contactos {
+        gap: 47px;
+    }
+}
+
+@include tablet-s {
+
+    .titulo-solapa {
+        h1 {
+            padding-top: 10px;
+        }
+    }
+
+    // Index
+    %anchos {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbary {
+        @extend %anchos;
+    }
+
+    .container {
+        @extend %anchos;
+    }
+
+    .navbar-brand {
+        img {
+            @extend %anchos;
+        }
+    }
+
+    .hero {
+        h1 {
+            font-size: nth($sizes, 8);
+        }
+    }
+
+    .hero {
+        p {
+            font-size: nth($sizes, 2);
+        }
+    }
+
+    .seccion {
+        padding: 20px 20px;
+    }
+
+    .seccion {
+        h1 {
+            font-size: nth($sizes, 10);
+        }
+    }
+
+    .destacados {
+        h1 {
+            font-size: nth($sizes, 10);
+        }
+    }
+
+    .promociones h1 {
+        font-size: nth($sizes, 10);
+    }
+
+
+    .seccion-tarjeta {
+        height: 210px;
+    }
+
+    .seccion-tarjeta {
+        h2 {
+            font-size: nth($sizes, 6);
+        }
+    }
+
+    .tarjeta {
+        p {
+            font-size: nth($sizes, 1);
+        }
+    }
+
+    .precio {
+        font-size: nth($sizes, 1);
+    }
+
+    .boton-comprar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .promo-fondo {
+        h2 {
+            font-size: nth($sizes, 6);
+        }
+    }
+
+    .boton-promo {
+        padding: 8px 14px;
+    }
+
+    .contacto {
+        h3 {
+            font-size: nth($sizes, 8);
+        }
+    }
+}
+
+@include celular {
+
+    // Index
+    .navbar-brand {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .nav-tabs {
+        .nav-link {
+            font-size: 4px;
+        }
+    }
+
+    .seccion-tarjeta {
+        width: 90%;
+        height: 200px;
+    }
+
+    .promo-fondo {
+        h2 {
+            font-size: nth($sizes, 6);
+        }
+    }
+
+    .boton-promo {
+        font-size: nth($sizes, 1);
+        padding: 8px 14px;
+    }
+
+    .contacto {
+        h3 {
+            font-size: nth($sizes, 7);
+        }
+    }
+
+    // Fragancias
+    .titulo-solapa {
+        h1 {
+            font-size: nth($sizes, 9);
+        }
+    }
+}
+
+@include celular-l {
+
+    // Index
+    .hero {
+        height: 400px;
+
+        h1 {
+            font-size: nth($sizes, 7);
+        }
+
+        p {
+            font-size: nth($sizes, 1);
+        }
+    }
+
+    .tarjeta {
+        padding: 15px;
+    }
+
+    .boton-comprar {
+        padding: 6px 10px;
+        font-size: nth($sizes, 15);
+    }
+
+    .boton-promo {
+        font-size: nth($sizes, 1);
+    }
+
+    .contacto {
+        h3 {
+            font-size: nth($sizes, 7);
+        }
+    }
+}
+
+@include celular-m {
+
+    .hero {
+        height: 400px;
+    }
+
+    .seccion,
+    .destacados,
+    .promociones {
+        h1 {
+            font-size: nth($sizes, 7);
+        }
+    }
+
+    .seccion-tarjeta {
+        height: 180px;
+        font-size: nth($sizes, 5);
+    }
+
+    .promo-fondo {
+        h2 {
+            font-size: nth($sizes, 3);
+        }
+    }
+
+    .boton-promo {
+        font-size: nth($sizes, 15);
+        padding: 6px 12px;
+    }
+
+    .contacto {
+        h3 {
+            font-size: nth($sizes, 7);
+        }
+    }
+}

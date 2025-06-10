@@ -1,0 +1,1054 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #333;
+  background-image: url("../img/fondo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.titulo-solapa {
+  height: 100px;
+  text-align: center;
+  align-content: center;
+  text-align: center;
+}
+.titulo-solapa h1 {
+  font-size: 40px;
+  color: black;
+}
+
+h1 {
+  font-size: 48px;
+  color: black;
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 25px;
+  color: white;
+}
+
+h3 {
+  font-size: 25px;
+  color: black;
+}
+
+h4 {
+  font-size: 18px;
+  color: black;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: slideDown 0.6s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+.navbar .navbar-brand {
+  flex-shrink: 0;
+}
+.navbar .nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.bootstrap-offcanvas {
+  display: none;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00ced8;
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: #00ced8;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: #00ced8;
+  font-weight: bold;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+footer {
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.footer-redes a img {
+  width: 35px;
+  transition: transform 0.3s;
+}
+.footer-redes a:hover img {
+  transform: scale(1.5);
+}
+
+.footer-mama {
+  font-size: 14px;
+  color: #333;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.footer-mama p {
+  margin-bottom: 0px;
+}
+
+.fijo {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+}
+.fijo img {
+  width: 40px;
+  transition: transform 0.3s;
+}
+.fijo a:hover img {
+  transform: scale(1.3);
+}
+
+/* --------------------- INDEX --------------------- */
+/* ------------------------------------------------- */
+.hero {
+  background-image: url("../img/fragancia.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-attachment: fixed;
+}
+.hero h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+.hero h1.titulo-tipeado {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: escribir 2.5s steps(30) forwards, parpadeo 0.7s steps(1) infinite;
+}
+@keyframes escribir {
+  to {
+    width: 100%;
+  }
+}
+@keyframes parpadeo {
+  50% {
+    border-color: transparent;
+  }
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.hero-fondo {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.boton-inicio {
+  background-color: #00ced8;
+  color: black;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* ------------------- SECCIONES ------------------- */
+.seccion {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.seccion-contenido {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.seccion-tarjeta {
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  width: 470px;
+  height: 350px;
+  padding: 30px;
+  color: white;
+  position: relative;
+  align-content: center;
+  transition: transform 0.3s ease;
+}
+.seccion-tarjeta h2 {
+  background-color: rgba(0, 205, 216, 0.5);
+  padding: 10px;
+  color: black;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.seccion-tarjeta:hover {
+  transform: scale(1.05);
+}
+.seccion-tarjeta:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.seccion-tarjeta.auto {
+  background-image: url("../img/auto.jpeg");
+}
+.seccion-tarjeta.textiles {
+  background-image: url("../img/textiles.jpg");
+}
+.seccion-tarjeta.ambiente {
+  background-image: url("../img/ambiente.jpg");
+}
+
+/* ------------------ DESTACADOS ------------------ */
+.destacados {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.tarjetas-destacados {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  border-radius: 10px;
+  color: #00ced8;
+  padding: 20px;
+  border: double;
+  display: flex;
+  flex-direction: column;
+}
+.tarjeta p {
+  color: black;
+  margin-bottom: 10px;
+}
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.tarjeta h4 {
+  margin: 10px 0 5px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #00ced8;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.boton-comprar {
+  background-color: #00ced8;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+}
+
+.boton-comprar:active {
+  animation: pulse 0.4s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ------------------ PROMOCIONES ------------------ */
+.promociones {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.promo-fondo {
+  background-color: black;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.boton-promo {
+  background-color: #00ced8;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  transition: transform 0.3s;
+}
+.boton-promo:hover {
+  transform: scale(1.1);
+}
+
+@keyframes resaltar {
+  0%, 100% {
+    transform: scale(1);
+    color: white;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #00ced8;
+  }
+}
+.promo-fondo h2 {
+  animation: resaltar 2s infinite;
+}
+
+/* ------------------ CONTACTO ------------------ */
+.contacto {
+  height: 250px;
+  background-color: #f4f4f4;
+  text-align: center;
+  align-content: center;
+}
+.contacto h3 {
+  font-size: 35px;
+  margin-bottom: 40px;
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.boton-contacto {
+  background-color: #00ced8;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* ------------------- FRAGANCIAS ------------------ */
+/* ------------------------------------------------- */
+.grid-fragancias-estilo {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  color: white;
+}
+
+.grid-fragancias-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.frag-item {
+  position: relative;
+  background-position: center;
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  text-align: center;
+}
+.frag-item.vertical {
+  height: 320px;
+}
+.frag-item.horizontal {
+  grid-column: span 2;
+  height: 320px;
+}
+.frag-item:hover .info-fragancia {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.info-fragancia {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 20px;
+  width: 100%;
+  align-content: center;
+  transition: background 0.5s ease;
+}
+.info-fragancia:hover {
+  background: fixed;
+  transition: 1.5s;
+}
+.info-fragancia:hover h2 {
+  transition: 1.5s;
+  font-size: 40px;
+}
+.info-fragancia h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  transition: 1.5s;
+}
+.info-fragancia p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.categoria {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* ------------------- NOSOTROS -------------------- */
+/* ------------------------------------------------- */
+.seccion-nosotros {
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.contenedor-nosotros {
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.titulo-nosotros h2 {
+  font-family: "Zain", sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+  text-align: center;
+}
+.titulo-nosotros h2.titulo-animado {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.titulo-nosotros h2.titulo-animado::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  height: 10px;
+  width: 100%;
+  background-color: #00ced8;
+  transform: scaleX(0);
+  transform-origin: center center;
+  transition: transform 0.6s ease-in-out;
+}
+.titulo-nosotros h2.titulo-animado:hover::after {
+  transform: scaleX(1);
+}
+
+.descripcion-nostros {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.descripcion-nostros p {
+  margin-bottom: 19px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+.descripcion-nostros strong {
+  font-weight: 600;
+}
+
+.nosotros-bloques {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 80px 20px;
+}
+
+.bloque {
+  flex: 1;
+  max-width: 380px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.bloque h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+/* ------------------- CONTACTO -------------------- */
+/* ------------------------------------------------- */
+.titulo-contacto {
+  display: flex;
+  justify-content: normal;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 30px;
+  height: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columna {
+  flex: 1;
+}
+.columna.izquierda h1, .columna.derecha h1 {
+  font-size: 45px;
+  text-align: left;
+  margin: 0;
+}
+
+.contactos {
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columnas {
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+  color: black;
+}
+.columnas h3,
+.columnas p {
+  color: black;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+form input,
+form textarea {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid black;
+  width: 100%;
+  font-family: inherit;
+}
+form button {
+  background-color: #00ced8;
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+  height: 40px;
+  color: white;
+}
+form button:hover {
+  background-color: rgb(12, 243.75, 255);
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.columnas-mapa {
+  flex: 1 1 500px;
+  max-width: 600px;
+  color: black;
+}
+
+.mapa {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+.mapa iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ubicacion-info {
+  background-color: #013a3d;
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.informacion {
+  background: transparent;
+  color: white;
+  padding: 0;
+}
+.informacion h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.informacion p {
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* --------------------- TIENDA -------------------- */
+/* ------------------------------------------------- */
+.btn-outline-secondary:hover, .categorias button:hover {
+  background-color: #00ced8;
+  color: white;
+  transition: 1s;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: solid #00ced8;
+  padding-bottom: 15px;
+}
+
+.form-check-label p {
+  font-size: 14px;
+}
+
+.categorias {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.categorias button {
+  padding: 8px 16px;
+  border: 1px solid #00ced8;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+.filtro-ordenar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.no-border {
+  border: none;
+  box-shadow: none;
+}
+
+.btn-outline-secondary {
+  border-radius: 0;
+  border: 1px solid #00ced8;
+  color: black;
+}
+.form-check-input:checked {
+  background-color: #00ced8;
+}
+
+.tarjeta {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tarjeta:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------- MEDIA QUERYS ------------------ */
+/* ------------------------------------------------- */
+@media screen and (max-width: 1440px) {
+  .grid-fragancias-div {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and (max-width: 1030px) {
+  .hero h1.titulo-tipeado {
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  .nav.nav-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-tabs .nav-link {
+    font-size: 15px;
+  }
+  .seccion-tarjeta h2 {
+    font-size: 15px;
+  }
+  .tarjetas-destacados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-fragancias-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .frag-item.horizontal {
+    grid-column: span 2;
+  }
+  .titulo-contacto {
+    flex-direction: column;
+    gap: 570px;
+    padding-top: 20px;
+    align-items: center;
+  }
+  .columna.izquierda h1, .columna.derecha h1 {
+    font-size: 35px;
+    text-align: left;
+    width: 100%;
+  }
+  .contactos {
+    flex-direction: column;
+    gap: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .columnas-mapa, .columnas {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  .columnas h3,
+  .columnas p {
+    text-align: left;
+  }
+  .ubicacion-info {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 630px) {
+  .nav-tabs .nav-link {
+    font-size: 15px;
+  }
+  .hero h1 {
+    font-size: 35px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+  .seccion-contenido {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .seccion-tarjeta {
+    height: 210px;
+  }
+  .tarjeta p {
+    font-size: 14px;
+  }
+  .precio {
+    font-size: 14px;
+  }
+  .boton-comprar {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .promo-fondo h2 {
+    font-size: 20px;
+  }
+  .boton-promo {
+    padding: 8px 14px;
+  }
+  .contacto h3 {
+    font-size: 30px;
+  }
+  .grid-fragancias-div {
+    grid-template-columns: 1fr;
+  }
+  .frag-item {
+    grid-column: span 1;
+    height: 250px;
+  }
+  .frag-item.vertical, .frag-item.horizontal {
+    grid-column: span 1;
+    height: 250px;
+  }
+  .info-fragancia h2 {
+    font-size: 20px;
+  }
+  .info-fragancia p {
+    font-size: 14px;
+  }
+  .contenedor-nosotros {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .titulo-nosotros,
+  .descripcion-nosotros {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .titulo-nosotros h2 {
+    font-size: 50px;
+  }
+  .titulo-contacto {
+    gap: 560px;
+  }
+  .contactos {
+    gap: 47px;
+  }
+}
+@media screen and (max-width: 566px) {
+  body {
+    padding-top: 80px;
+  }
+  .bootstrap-offcanvas {
+    display: block;
+  }
+  .bg-body-tertiary {
+    background-color: white !important;
+  }
+  .navbar-personalizada {
+    display: none;
+  }
+  .titulo-solapa h1 {
+    padding-top: 30px;
+  }
+  .titulo-contacto {
+    gap: 590px;
+  }
+  .contactos {
+    gap: 47px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .titulo-solapa h1 {
+    padding-top: 10px;
+  }
+  .navbar-brand img, .container, .navbary {
+    width: 50px;
+    height: 50px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .seccion {
+    padding: 20px 20px;
+  }
+  .seccion h1 {
+    font-size: 40px;
+  }
+  .destacados h1 {
+    font-size: 40px;
+  }
+  .promociones h1 {
+    font-size: 40px;
+  }
+  .seccion-tarjeta {
+    height: 210px;
+  }
+  .seccion-tarjeta h2 {
+    font-size: 20px;
+  }
+  .tarjeta p {
+    font-size: 14px;
+  }
+  .precio {
+    font-size: 14px;
+  }
+  .boton-comprar {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .promo-fondo h2 {
+    font-size: 20px;
+  }
+  .boton-promo {
+    padding: 8px 14px;
+  }
+  .contacto h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 485px) {
+  .navbar-brand img {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-tabs .nav-link {
+    font-size: 4px;
+  }
+  .seccion-tarjeta {
+    width: 90%;
+    height: 200px;
+  }
+  .promo-fondo h2 {
+    font-size: 20px;
+  }
+  .boton-promo {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  .contacto h3 {
+    font-size: 25px;
+  }
+  .titulo-solapa h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero {
+    height: 400px;
+  }
+  .hero h1 {
+    font-size: 25px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .tarjeta {
+    padding: 15px;
+  }
+  .boton-comprar {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .boton-promo {
+    font-size: 14px;
+  }
+  .contacto h3 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .hero {
+    height: 400px;
+  }
+  .seccion h1,
+  .destacados h1,
+  .promociones h1 {
+    font-size: 25px;
+  }
+  .seccion-tarjeta {
+    height: 180px;
+    font-size: 18px;
+  }
+  .promo-fondo h2 {
+    font-size: 16px;
+  }
+  .boton-promo {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .contacto h3 {
+    font-size: 25px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
