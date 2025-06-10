@@ -1,0 +1,134 @@
+@import '../base/funcionalidad';
+
+/* ------------------- CONTACTO -------------------- */
+/* ------------------------------------------------- */
+
+.titulo-contacto {
+    //Titulos de seccion
+    @include flex (flex, normal, flex-start);
+    gap: 40px;
+    padding-top: 30px;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columna {
+    flex: 1;
+
+    &.izquierda,
+    &.derecha {
+        h1 {
+            font-size: nth($sizes, 11);
+            text-align: left;
+            margin: 0;
+        }
+    }
+}
+
+.contactos {
+    // Config de area y fondo
+    @include flex (flex, center, normal);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columnas {
+    // Division de columna
+    flex: 1 1 500px;
+    max-width: 600px;
+    text-align: left;
+    background-color: $color-blanco;
+    padding: 30px;
+    color: $color-negro;
+
+    h3,
+    p {
+        //Config de titulos
+        color: $color-negro;
+        text-align: center;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+
+    input,
+    textarea {
+        padding: 14px;
+        font-size: nth($sizes, 3);
+        border-radius: 8px;
+        border: 1px solid $color-negro;
+        width: 100%;
+        font-family: inherit;
+    }
+
+    button {
+        background-color: $color-cian;
+        color: $color-blanco;
+        border: none;
+        font-weight: bold;
+        transition: 0.4s;
+        cursor: pointer;
+        height: 40px;
+        color: $color-blanco;
+
+        &:hover {
+            background-color: lighten($color-cian, 10%);
+            transform: scale(1.05);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+.columnas-mapa {
+    // Conf de fondo mapa
+    flex: 1 1 500px;
+    max-width: 600px;
+    color: $color-negro;
+}
+
+.mapa {
+    // Conf de mapa
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    overflow: hidden;
+
+    iframe {
+        // Conf de mapa link
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ubicacion-info {
+    //Base de mapa con info 
+    background-color: $color-fondo-mapa;
+    color: $color-blanco;
+    padding: 15px;
+    font-size: nth($sizes, 2);
+    text-align: center;
+}
+
+.informacion {
+    background: transparent;
+    color: $color-blanco;
+    padding: 0;
+
+    h4 {
+        font-size: nth($sizes, 5);
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    p {
+        font-style: normal;
+        font-size: nth($sizes, 3);
+    }
+}

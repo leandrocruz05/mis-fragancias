@@ -1,0 +1,265 @@
+@import '../base/funcionalidad';
+
+/* --------------------- INDEX --------------------- */
+/* ------------------------------------------------- */
+.hero {
+    //Recibidor
+    @include fondo-imagen('../img/fragancia.jpg');
+    height: 90vh;
+    @include flex(flex, center, center);
+    color: $color-blanco;
+    text-align: center;
+    background-attachment: fixed;
+
+    h1 {
+        //Titulo Recibidor
+        margin-bottom: 20px;
+        color: $color-blanco;
+
+        &.titulo-tipeado {
+            overflow: hidden; // Oculta el texto que aún no "apareció"
+            //border-right: 2px solid $color-cian; // Simula el cursor
+            white-space: nowrap; // No se corta en varias líneas
+            width: 0;
+            animation: escribir 2.5s steps(30) forwards, parpadeo 0.7s steps(1) infinite;
+        }
+
+        @keyframes escribir {
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes parpadeo {
+            50% {
+                border-color: transparent;
+            }
+        }
+    }
+
+    p {
+        //Texto Recibidor
+        font-size: nth($sizes, 6);
+        margin-bottom: 0;
+    }
+}
+
+.hero-fondo {
+    //Fondo Recibidor
+    background-color: $color-negro-transparente;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.boton-inicio {
+    //Boton Recibidor
+    @include boton($color-cian, $color-negro, 8px, 15px 25px);
+    font-size: nth($sizes, 5);
+    transition: 0.3s;
+}
+
+/* ------------------- SECCIONES ------------------- */
+.seccion {
+    //Seccion
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.seccion-contenido {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.seccion-tarjeta {
+    @include fondo-imagen('');
+    width: 470px;
+    height: 350px;
+    padding: 30px;
+    color: $color-blanco;
+    position: relative;
+    align-content: center;
+    transition: transform 0.3s ease;
+
+    h2 {
+        background-color: $color-cian-transparente;
+        padding: 10px;
+        color: $color-negro;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        h2 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &.auto {
+        background-image: url('../img/auto.jpeg');
+    }
+
+    &.textiles {
+        background-image: url('../img/textiles.jpg');
+    }
+
+    &.ambiente {
+        background-image: url('../img/ambiente.jpg');
+    }
+}
+
+/* ------------------ DESTACADOS ------------------ */
+.destacados {
+    //Contenido de las secciones
+    text-align: center;
+    padding: 40px 20px;
+    background-color: $color-blanco;
+}
+
+.tarjetas-destacados {
+    //Tarjetas de destacados
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    //Contenido tarjetas de destacados
+    border-radius: 10px;
+    color: $color-cian;
+    padding: 20px;
+    border: double;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        //Doy espacio al texto de la tarjeta
+        color: $color-negro;
+        margin-bottom: 10px;
+    }
+
+    img {
+        //Foto de tarjetas de destacados
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        //Doy espacio al titulo de la tarjeta
+        margin: 10px 0 5px;
+    }
+}
+
+.precio {
+    //Estilo del precio de tarjetas destacados
+    font-weight: bold;
+    color: $color-cian;
+    margin-bottom: 10px;
+    font-size: nth($sizes, 6);
+}
+
+.boton-comprar {
+    //Boton comprar de tarjetas destacados
+    @include boton($color-cian, $color-blanco, 10px, 10px);
+    border: none;
+}
+
+.boton-comprar:active {
+    animation: pulse 0.4s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ------------------ PROMOCIONES ------------------ */
+.promociones {
+    //Contenido promociones
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.promo-fondo {
+    //Fondo promociones
+    background-color: $color-negro;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.boton-promo {
+    //Boton promociones
+    @include boton($color-cian, $color-negro, 25px, 10px 20px);
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes resaltar {
+
+    0%,
+    100% {
+        transform: scale(1);
+        color: $color-blanco;
+    }
+
+    50% {
+        transform: scale(1.1);
+        color: $color-cian;
+    }
+}
+
+.promo-fondo h2 {
+    animation: resaltar 2s infinite;
+}
+
+/* ------------------ CONTACTO ------------------ */
+.contacto {
+    //Fondo contacto
+    height: 250px;
+    background-color: $color-fondo-contacto;
+    text-align: center;
+    align-content: center;
+
+    h3 {
+        //Titulo contacto
+        font-size: nth($sizes, 9);
+        margin-bottom: 40px;
+        font-family: $fuente-titulos;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.boton-contacto {
+    //Fondo y boton contacto
+    @include boton($color-cian, $color-negro, 5px, 12px 25px);
+}

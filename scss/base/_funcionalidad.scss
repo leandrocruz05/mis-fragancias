@@ -1,0 +1,115 @@
+// ---------------- Variables
+//Colores
+$color-negro: black;
+$color-gris-oscuro: #333;
+$color-gris-medio: #555;
+$color-blanco: white;
+$color-cian: #00ced8;
+$color-cian-transparente: rgba(0, 205, 216, 0.5);
+$color-negro-transparente: rgba(0, 0, 0, 0.6);
+$color-transparente: rgba(255, 255, 255, 0.2);
+$color-fondo-contacto: #f4f4f4;
+$color-fondo-mapa: #013a3d;
+
+//Fuentes
+$fuente-titulos: "Oleo Script", system-ui;
+$fuente-principal: "Poppins", sans-serif;
+$fuente-nosotros: "Zain", sans-serif;
+
+// ---------------- Listas
+$sizes: 14px, //1
+    15px, //2
+    16px, //3
+    17px, //4
+    18px, //5
+    20px, //6
+    25px, //7
+    30px, //8
+    35px, //9
+    40px, //10
+    45px, //11
+    48px, //12
+    50px, //13
+    70px, //14
+    12px; //15
+
+// ---------------- Mixins
+@mixin flex($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin fondo-imagen($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin boton($bg-color, $text-color, $radius, $padding) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    text-decoration: none;
+    border-radius: $radius;
+}
+
+@mixin pantalla {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin pantalla-l {
+    @media screen and (max-width: 1030px) {
+        @content;
+    }
+}
+
+@mixin pantalla-m {
+    @media screen and (max-width: 880px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet-l {
+    @media screen and (max-width: 630px) {
+        @content;
+    }
+}
+
+@mixin tablet-m {
+    @media screen and (max-width: 566px) {
+        @content;
+    }
+}
+
+@mixin tablet-s {
+    @media screen and (max-width: 520px) {
+        @content;
+    }
+}
+
+@mixin celular {
+    @media screen and (max-width: 485px) {
+        @content;
+    }
+}
+
+@mixin celular-l {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin celular-m {
+    @media screen and (max-width: 350px) {
+        @content;
+    }
+}
