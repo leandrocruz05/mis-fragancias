@@ -84,19 +84,20 @@
     align-content: center;
     transition: transform 0.3s ease;
 
-    h2 {
+    h3 {
         background-color: $color-cian-transparente;
         padding: 10px;
         color: $color-negro;
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.3s, transform 0.3s;
+        font-family: $fuente-titulos;
     }
 
     &:hover {
         transform: scale(1.05);
 
-        h2 {
+        h3 {
             opacity: 1;
             transform: translateY(0);
         }
@@ -155,7 +156,7 @@
         margin-bottom: 15px;
     }
 
-    h4 {
+    h5 {
         //Doy espacio al titulo de la tarjeta
         margin: 10px 0 5px;
     }
@@ -237,7 +238,7 @@
     }
 }
 
-.promo-fondo h2 {
+.promo-fondo h3 {
     animation: resaltar 2s infinite;
 }
 
@@ -249,7 +250,7 @@
     text-align: center;
     align-content: center;
 
-    h3 {
+    h2 {
         //Titulo contacto
         font-size: nth($sizes, 9);
         margin-bottom: 40px;

@@ -39,18 +39,27 @@ h1 {
 }
 
 h2 {
+    // Subtitulos grandes
+    font-size: nth($sizes, 9);
+    color: $color-negro;
+    font-family: $fuente-titulos;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
     //Subtitulos blancos
     font-size: nth($sizes, 7);
     color: $color-blanco;
 }
 
-h3 {
+h4 {
     // Subtitulos negros
     font-size: nth($sizes, 7);
     color: $color-negro;
 }
 
-h4 {
+h5 {
     //Subtitulo menor negro
     font-size: nth($sizes, 5);
     color: $color-negro;

@@ -33,16 +33,24 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
-  color: white;
+  font-size: 35px;
+  color: black;
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h3 {
   font-size: 25px;
-  color: black;
+  color: white;
 }
 
 h4 {
+  font-size: 25px;
+  color: black;
+}
+
+h5 {
   font-size: 18px;
   color: black;
 }
@@ -251,18 +259,19 @@ footer {
   align-content: center;
   transition: transform 0.3s ease;
 }
-.seccion-tarjeta h2 {
+.seccion-tarjeta h3 {
   background-color: rgba(0, 205, 216, 0.5);
   padding: 10px;
   color: black;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s, transform 0.3s;
+  font-family: "Oleo Script", system-ui;
 }
 .seccion-tarjeta:hover {
   transform: scale(1.05);
 }
-.seccion-tarjeta:hover h2 {
+.seccion-tarjeta:hover h3 {
   opacity: 1;
   transform: translateY(0);
 }
@@ -309,7 +318,7 @@ footer {
   height: auto;
   margin-bottom: 15px;
 }
-.tarjeta h4 {
+.tarjeta h5 {
   margin: 10px 0 5px;
 }
 
@@ -383,7 +392,7 @@ footer {
     color: #00ced8;
   }
 }
-.promo-fondo h2 {
+.promo-fondo h3 {
   animation: resaltar 2s infinite;
 }
 
@@ -394,7 +403,7 @@ footer {
   text-align: center;
   align-content: center;
 }
-.contacto h3 {
+.contacto h2 {
   font-size: 35px;
   margin-bottom: 40px;
   font-family: "Oleo Script", system-ui;
@@ -462,11 +471,13 @@ footer {
 .info-fragancia:hover h2 {
   transition: 1.5s;
   font-size: 40px;
+  color: white;
 }
 .info-fragancia h2 {
   margin: 0 0 10px;
   font-size: 24px;
   transition: 1.5s;
+  color: white;
 }
 .info-fragancia p {
   font-size: 16px;
@@ -783,7 +794,7 @@ form button:hover {
   .nav-tabs .nav-link {
     font-size: 15px;
   }
-  .seccion-tarjeta h2 {
+  .seccion-tarjeta h3 {
     font-size: 15px;
   }
   .tarjetas-destacados {
@@ -818,7 +829,7 @@ form button:hover {
     margin: 0;
     padding: 20px;
   }
-  .columnas h3,
+  .columnas h2,
   .columnas p {
     text-align: left;
   }
@@ -854,13 +865,13 @@ form button:hover {
     font-size: 14px;
     padding: 8px 12px;
   }
-  .promo-fondo h2 {
+  .promo-fondo h3 {
     font-size: 20px;
   }
   .boton-promo {
     padding: 8px 14px;
   }
-  .contacto h3 {
+  .contacto h2 {
     font-size: 30px;
   }
   .grid-fragancias-div {
@@ -941,19 +952,19 @@ form button:hover {
   .seccion {
     padding: 20px 20px;
   }
-  .seccion h1 {
+  .seccion h2 {
     font-size: 40px;
   }
-  .destacados h1 {
+  .destacados h2 {
     font-size: 40px;
   }
-  .promociones h1 {
+  .promociones h2 {
     font-size: 40px;
   }
   .seccion-tarjeta {
     height: 210px;
   }
-  .seccion-tarjeta h2 {
+  .seccion-tarjeta h3 {
     font-size: 20px;
   }
   .tarjeta p {
@@ -966,13 +977,13 @@ form button:hover {
     font-size: 14px;
     padding: 8px 12px;
   }
-  .promo-fondo h2 {
+  .promo-fondo h3 {
     font-size: 20px;
   }
   .boton-promo {
     padding: 8px 14px;
   }
-  .contacto h3 {
+  .contacto h2 {
     font-size: 30px;
   }
 }
@@ -988,14 +999,14 @@ form button:hover {
     width: 90%;
     height: 200px;
   }
-  .promo-fondo h2 {
+  .promo-fondo h3 {
     font-size: 20px;
   }
   .boton-promo {
     font-size: 14px;
     padding: 8px 14px;
   }
-  .contacto h3 {
+  .contacto h2 {
     font-size: 25px;
   }
   .titulo-solapa h1 {
@@ -1022,7 +1033,7 @@ form button:hover {
   .boton-promo {
     font-size: 14px;
   }
-  .contacto h3 {
+  .contacto h2 {
     font-size: 25px;
   }
 }
@@ -1030,23 +1041,23 @@ form button:hover {
   .hero {
     height: 400px;
   }
-  .seccion h1,
-  .destacados h1,
-  .promociones h1 {
+  .seccion h2,
+  .destacados h2,
+  .promociones h2 {
     font-size: 25px;
   }
   .seccion-tarjeta {
     height: 180px;
     font-size: 18px;
   }
-  .promo-fondo h2 {
+  .promo-fondo h3 {
     font-size: 16px;
   }
   .boton-promo {
     font-size: 12px;
     padding: 6px 12px;
   }
-  .contacto h3 {
+  .contacto h2 {
     font-size: 25px;
   }
 }
